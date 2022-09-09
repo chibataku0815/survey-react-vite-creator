@@ -1,0 +1,20 @@
+export const creatorOptions = {
+  showLogicTab: true,
+  showJSONEditorTab: true,
+  showEmbededSurveyTab: false,
+  showTranslationTab: false,
+  // showPagesToolbox: false,
+  haveCommercialLicense: true,
+  showSimulatorInTestSurveyTab: false,
+  showSurveyTitle: "always",
+  questionTypes: [
+    "text",
+    "checkbox",
+    "radiogroup",
+    "dropdown",
+    "comment",
+    "rating",
+    "html",
+    "file",
+    "multipletext",
+  ]};
