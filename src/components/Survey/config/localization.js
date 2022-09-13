@@ -1,18 +1,20 @@
-import { localization } from 'survey-creator-core';
+import { editorLocalization, localization } from 'survey-creator-core';
 import 'survey-creator-core/survey-creator-core.i18n.js';
 
-export const jaLocale = localization.getLocale('ja');
 /*
 
 schema:　https://github.com/surveyjs/survey-creator/blob/bc1a19a3789c057ba5bc924d5cdbcbd735edbdb4/packages/survey-creator-core/src/localization/japanese.ts
+
+schema:　https://github.com/surveyjs/survey-creator/blob/bc1a19a3789c057ba5bc924d5cdbcbd735edbdb4/packages/survey-creator-core/src/localization/english.ts
 
 examples
 jaLocale.ed.addNewQuestion = "Neue Frage";
 jaLocale.ed.addNewTypeQuestion = "Neue {0}";
 */
 
-export var jaStrings = {
+export const customLocaleStrings = {
   ed: {
+    addNewQuestion: '新規質問を追加',
     addNewPage: '新規ページを追加する',
     bold: '太字',
     chooseElement: '要素を選択…',
@@ -26,6 +28,7 @@ export var jaStrings = {
     designer: 'アンケートの設計者',
     edit: '編集',
     editPage: 'ページを編集する',
+    surveyPlaceHolder: '質問を追加してください',
     embedSurvey: 'アンケートを埋め込む',
     fpAddQuestion: '質問を追加…',
     generateReadableJSON: '読み取り可能なJSONを生成する',
@@ -566,5 +569,7 @@ export var jaStrings = {
   },
 };
 
-editorLocalization.locales['ja'] = jaStrings;
+localization.getLocale('ja');
 localization.currentLocale = 'ja';
+editorLocalization.locales['customlocale'] = customLocaleStrings;
+localization.currentLocale = 'customlocale';

@@ -8,13 +8,17 @@ import './config/localization';
 import './config/propertiesGrid';
 import { visibledProperties } from './config/propertiesGrid';
 import { setToolboxDefaltValue } from './config/toolbox';
-import { orderToolboxItem, setToolboxItemTitle } from './config/toolboxItem';
+import { orderToolboxItem } from './config/toolboxItem';
 
 function SurveyComponent() {
   const creator = new SurveyCreator(creatorOptions);
 
   visibledProperties(creator);
-  setToolboxItemTitle(setToolboxItemTitle);
+  //   setToolboxItemTitle(setToolboxItemTitle);
+
+  creator.toolbox.getItemByName('text').tooltip = 'testestestestte';
+
+  console.info(creator.toolbox.getItemByName('text').tooltip);
   orderToolboxItem(creator);
   setToolboxDefaltValue(creator);
 
