@@ -7,6 +7,7 @@ import { creatorOptions } from './config/creatorOptions';
 import './config/localization';
 import './config/propertiesGrid';
 import { visibledProperties } from './config/propertiesGrid';
+import { setToolboxDefaltValue } from './config/toolbox';
 import { orderToolboxItem, setToolboxItemTitle } from './config/toolboxItem';
 
 function SurveyComponent() {
@@ -15,6 +16,7 @@ function SurveyComponent() {
   visibledProperties(creator);
   setToolboxItemTitle(setToolboxItemTitle);
   orderToolboxItem(creator);
+  setToolboxDefaltValue(creator);
 
   return (
     <Fragment>
