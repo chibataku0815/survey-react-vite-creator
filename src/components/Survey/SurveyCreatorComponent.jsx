@@ -7,11 +7,14 @@ import { creatorOptions } from './config/creatorOptions';
 import './config/localization';
 import './config/propertiesGrid';
 import { visibledProperties } from './config/propertiesGrid';
+import { orderToolboxItem, setToolboxItemTitle } from './config/toolboxItem';
 
 function SurveyComponent() {
   const creator = new SurveyCreator(creatorOptions);
 
   visibledProperties(creator);
+  setToolboxItemTitle(setToolboxItemTitle);
+  orderToolboxItem(creator);
 
   return (
     <Fragment>
