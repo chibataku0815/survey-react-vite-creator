@@ -10,6 +10,8 @@ schema:　https://github.com/surveyjs/survey-creator/blob/bc1a19a3789c057ba5bc92
 examples
 jaLocale.ed.addNewQuestion = "Neue Frage";
 jaLocale.ed.addNewTypeQuestion = "Neue {0}";
+
+問題点：改行ができない
 */
 
 export const customLocaleStrings = {
@@ -28,7 +30,7 @@ export const customLocaleStrings = {
     designer: 'アンケートの設計者',
     edit: '編集',
     editPage: 'ページを編集する',
-    surveyPlaceHolder: '質問を追加してください',
+    surveyPlaceHolder: `フォームの作成を行うにはツールボックスから各コンポーネントをドラッグ＆ドロップしてください。`,
     embedSurvey: 'アンケートを埋め込む',
     fpAddQuestion: '質問を追加…',
     generateReadableJSON: '読み取り可能なJSONを生成する',
