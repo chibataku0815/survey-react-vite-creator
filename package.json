@@ -23,7 +23,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "survey-core": "latest",
-    "survey-creator-react": "^1.9.48",
+    "survey-creator-core": "^1.9.63",
+    "survey-creator-react": "latest",
     "survey-react-ui": "latest"
   },
   "devDependencies": {
