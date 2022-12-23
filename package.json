@@ -19,12 +19,15 @@
     "@linaria/core": "^3.0.0-beta.15",
     "@linaria/react": "^3.0.0-beta.15",
     "@linaria/shaker": "^3.0.0-beta.15",
+    "@simonwep/pickr": "^1.8.2",
     "@tanstack/react-query": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "survey-core": "latest",
-    "survey-creator-react": "^1.9.48",
-    "survey-react-ui": "latest"
+    "survey-core": "^1.9.65",
+    "survey-creator-core": "^1.9.65",
+    "survey-creator-react": "^1.9.65",
+    "survey-react-ui": "latest",
+    "surveyjs-widgets": "^1.9.65"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

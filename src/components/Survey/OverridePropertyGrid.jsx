@@ -7,21 +7,25 @@ import 'survey-creator-core/survey-creator-core.i18n.js';
 
 import 'survey-core/defaultV2.css';
 import 'survey-creator-core/survey-creator-core.css';
+import { PropertyGridComponent } from 'survey-creator-react';
 
 export default function CustomPropertyGridWrapper(props) {
-  console.info(`functional`);
+  // console.info(`functional`);
 
   const { model } = props;
 
-  console.info(model);
+  // console.info(model);
 
   useEffect(() => {
     if (!model) return;
+    // console.info(model);
     return () => {};
   }, []);
   return (
     <>
-      <h1>Hello, world</h1>
+      <PropertyGridComponent model={model}>
+        <h1>Hello {model}</h1>
+      </PropertyGridComponent>
     </>
   );
 }
