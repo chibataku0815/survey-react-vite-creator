@@ -14,5 +14,16 @@ export const creatorOptions = {
   haveCommercialLicense: true,
   showSimulatorInTestSurveyTab: false,
   showSurveyTitle: 'always',
-  questionTypes: ['text', 'checkbox', 'radiogroup', 'dropdown', 'comment', 'rating', 'html', 'file', 'multipletext'],
+  questionTypes: [
+    'text',
+    'checkbox',
+    'radiogroup',
+    'dropdown',
+    'comment',
+    'rating',
+    'html',
+    'file',
+    'multipletext',
+    'link',
+  ],
 };

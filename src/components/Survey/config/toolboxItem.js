@@ -34,4 +34,5 @@ export const orderToolboxItem = (creator) =>
     'rating',
     'file',
     'html',
+    'link',
   ]);
