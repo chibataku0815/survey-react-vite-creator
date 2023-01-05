@@ -1,13 +1,13 @@
+import Pickr from '@simonwep/pickr';
+import '@simonwep/pickr/dist/themes/monolith.min.css';
 import { useEffect } from 'react';
+import { CustomWidgetCollection, JsonObject } from 'survey-core';
 import 'survey-core/defaultV2.css';
 import 'survey-creator-core/survey-creator-core.css';
 import { SurveyCreator, SurveyCreatorComponent } from 'survey-creator-react';
+import { validateHTMLColorHex } from 'validate-color';
 import '../../styless/style';
 import { creatorOptions } from './config/creatorOptions';
-// import "./index.css";
-import Pickr from '@simonwep/pickr';
-import '@simonwep/pickr/dist/themes/monolith.min.css';
-import { CustomWidgetCollection, JsonObject } from 'survey-core';
 import './config/localization';
 import { visibledProperties } from './config/propertiesGrid';
 import { setToolboxDefaltValue } from './config/toolbox';
@@ -46,7 +46,6 @@ function SurveyComponent() {
       // .pickrを持つ要素を取得
       const hasPickr = el.querySelector('.pickr');
       // inputの後ろにpickrDivを追加
-      console.info(hasPickr === null);
       if (!hasPickr) {
         input.after(pickrDiv);
       } else {
@@ -115,14 +114,36 @@ function SurveyComponent() {
     visibleIndex: 1,
   });
 
+  creator.onPropertyValidationCustomError.add((sender, options) => {
+    if (options.propertyName === 'name') {
+      options.value.length > 32 ? (options.error = '32文字まで入力してください') : (options.error = '');
+    }
+  });
+
+  creator.onPropertyValidationCustomError.add((sender, options) => {
+    if (options.propertyName === 'maxSize') {
+      Number(options.value) > 314572800
+        ? (options.error = '最大サイズは300MBまでに設定してください')
+        : (options.error = '');
+    }
+  });
+
+  creator.onPropertyValidationCustomError.add((sender, options) => {
+    if (options.propertyName === 'submitbuttonColor') {
+      if (!validateHTMLColorHex(options.value)) {
+        options.error = '正しいカラーコードを入力してください（例：#000000）';
+      }
+    }
+  });
+
   useEffect(() => {
     return () => {};
   }, []);
 
   return (
-    <div>
-      <SurveyCreatorComponent creator={creator} renderElement={(data) => <h1>Hello {data.target}</h1>} />
-    </div>
+    <>
+      <SurveyCreatorComponent creator={creator} />
+    </>
   );
 }
 

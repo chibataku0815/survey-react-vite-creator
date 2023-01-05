@@ -23,11 +23,12 @@
     "@tanstack/react-query": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "survey-core": "^1.9.65",
-    "survey-creator-core": "^1.9.65",
-    "survey-creator-react": "^1.9.65",
+    "survey-core": "^1.9.66",
+    "survey-creator-core": "^1.9.66",
+    "survey-creator-react": "^1.9.66",
     "survey-react-ui": "latest",
-    "surveyjs-widgets": "^1.9.65"
+    "surveyjs-widgets": "^1.9.65",
+    "validate-color": "^2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

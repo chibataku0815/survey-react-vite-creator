@@ -27,12 +27,13 @@ specifiers:
   prettier: ^2.7.1
   react: ^18.2.0
   react-dom: ^18.2.0
-  survey-core: ^1.9.65
-  survey-creator-core: ^1.9.65
-  survey-creator-react: ^1.9.65
+  survey-core: ^1.9.66
+  survey-creator-core: ^1.9.66
+  survey-creator-react: ^1.9.66
   survey-react-ui: latest
   surveyjs-widgets: ^1.9.65
   typescript: ^4.6.4
+  validate-color: ^2.2.1
   vite: ^3.0.7
   vite-plugin-linaria: ^1.0.0
   vite-plugin-svgr: ^2.2.1
@@ -47,11 +48,12 @@ dependencies:
   '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  survey-core: 1.9.65
-  survey-creator-core: 1.9.65
-  survey-creator-react: 1.9.65
-  survey-react-ui: 1.9.65
+  survey-core: 1.9.66
+  survey-creator-core: 1.9.66
+  survey-creator-react: 1.9.66
+  survey-react-ui: 1.9.66
   surveyjs-widgets: 1.9.65
+  validate-color: 2.2.1
 
 devDependencies:
   '@babel/core': 7.20.7
@@ -4231,38 +4233,38 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /survey-core/1.9.65:
-    resolution: {integrity: sha512-YE//L/DCyqv4YSWY3xheB1u5J2pAkXwJDHBHb+2N9Agn8K3Y8FssZXgjHLjNl+Hkvc2to8R3ChohDWoqShCYQw==}
+  /survey-core/1.9.66:
+    resolution: {integrity: sha512-tJbCALkAphNTtQ/rkBMc8P2so6qo3EOD0qR8Ylr6OenR27KputuFz2pF/H/KLAl1cm3DE1QE6ppgFVTpua+J0Q==}
     dev: false
 
-  /survey-creator-core/1.9.65:
-    resolution: {integrity: sha512-wofkNzHrq2byOYWC3c7dL6gsZNZn5zGm6gL2RVuYLj84lMHPhOjPti5xZluS0jPHysFI+dlle+hBKpLMyixoAQ==}
+  /survey-creator-core/1.9.66:
+    resolution: {integrity: sha512-+uvAgOS+Kbc/Wvl7UadgrXQ3Phwgw2jTrzLzSX1/n3zZyXkomX8UF1SdZlce0BEmxygQ3Z2cfllxIdaOZtIhTw==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
       ace-builds: ^1.4.12
     dependencies:
-      survey-core: 1.9.65
+      survey-core: 1.9.66
     dev: false
 
-  /survey-creator-react/1.9.65:
-    resolution: {integrity: sha512-z4guKpAo4VtAR3VhQyBNl0NHemLcwbAuOWT1UaVxcWw14ghKOWpJiD/S5A5FtXK0XmF4OlopKfX/JQ0EY9TzNg==}
+  /survey-creator-react/1.9.66:
+    resolution: {integrity: sha512-klzcY5ViIuWjmtYvv/Yy/VH2ZIegoDsTu7yyZgSwxNziSY5O3BzVCh6hH2IKdlgy6nbtQUpGbAYDuKlNA5PWlA==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
       ace-builds: ^1.4.12
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      survey-core: 1.9.65
-      survey-creator-core: 1.9.65
-      survey-react-ui: 1.9.65
+      survey-core: 1.9.66
+      survey-creator-core: 1.9.66
+      survey-react-ui: 1.9.66
     dev: false
 
-  /survey-react-ui/1.9.65:
-    resolution: {integrity: sha512-F8ayCdYbPsKBInJKkYUdYTtYMFaZoOrK2I4UEU77WlYifT3TiK4ofX4L46JhSxnADgK16oqU5ir5+XXEzijCYQ==}
+  /survey-react-ui/1.9.66:
+    resolution: {integrity: sha512-LWBZh0WUkbhCvbREfKugrniQ7eXI0OrYMSIpsWuhUKkoYANtdhzRcuWH2BPvEtDsl/PZPVL96HJ09WXGFTAU0g==}
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      survey-core: 1.9.65
+      survey-core: 1.9.66
     dev: false
 
   /surveyjs-widgets/1.9.65:
@@ -4437,6 +4439,10 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /validate-color/2.2.1:
+    resolution: {integrity: sha512-1eDb1zqP6W6bbfKKl6dRXObelNoQpW7aF3BUTh2AivWuhcD0pa3ejwURWqrVsyKJMLBMlHLFcM3sj5J+dSFhbg==}
     dev: false
 
   /vite-plugin-linaria/1.0.0_vite@3.2.5:
