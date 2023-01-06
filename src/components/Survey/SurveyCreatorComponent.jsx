@@ -1,11 +1,12 @@
 import Pickr from '@simonwep/pickr';
 import '@simonwep/pickr/dist/themes/monolith.min.css';
 import { useEffect } from 'react';
-import { CustomWidgetCollection, JsonObject } from 'survey-core';
+import { CustomWidgetCollection, JsonObject, Serializer } from 'survey-core';
 import 'survey-core/defaultV2.css';
 import 'survey-creator-core/survey-creator-core.css';
 import { SurveyCreator, SurveyCreatorComponent } from 'survey-creator-react';
 import { validateHTMLColorHex } from 'validate-color';
+import { SURVEY_PROPERTY_BLACK_LIST } from '../../config/propertyGridBlackList';
 import '../../styless/style';
 import { creatorOptions } from './config/creatorOptions';
 import './config/localization';
@@ -112,6 +113,20 @@ function SurveyComponent() {
     default: '#000000',
     category: 'general',
     visibleIndex: 1,
+  });
+
+  creator.onShowingProperty.add((_sender, options) => {
+    options.canShow = SURVEY_PROPERTY_BLACK_LIST.indexOf(options.propertyName) === -1;
+    if (options.propertyName === 'completedHtml') {
+      options.propertyHtml = '';
+    }
+  });
+
+  Serializer.addProperty('survey', {
+    name: 'adminNotification:boolean',
+    default: false,
+    category: 'sendOptions',
+    categoryIndex: 200,
   });
 
   creator.onPropertyValidationCustomError.add((sender, options) => {

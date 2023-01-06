@@ -390,6 +390,7 @@ export const customLocaleStrings = {
       matrixChoices: 'デフォルトの選択',
       multipleTextItems: 'テキスト入力',
       navigation: 'ナビゲーション',
+      sendOptions: '送信オプション',
       numbering: '番号付け',
       others: 'その他',
       pages: 'ページ',
@@ -568,6 +569,9 @@ export const customLocaleStrings = {
     numericvalidator: '数字の',
     regexvalidator: '正規表現',
     textvalidator: 'テキスト',
+  },
+  p: {
+    adminNotification: '管理者にお知らせ送信',
   },
 };
 
