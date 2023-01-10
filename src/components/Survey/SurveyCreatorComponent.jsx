@@ -129,6 +129,16 @@ function SurveyComponent() {
     categoryIndex: 200,
   });
 
+  Serializer.addProperty('text', {
+    name: 'userNotification:boolean',
+    default: false,
+    category: 'general',
+    dependsOn: ['inputType'],
+    visibleIf(obj) {
+      return obj.inputType === 'email';
+    },
+  });
+
   creator.onPropertyValidationCustomError.add((sender, options) => {
     if (options.propertyName === 'name') {
       options.value.length > 32 ? (options.error = '32文字まで入力してください') : (options.error = '');

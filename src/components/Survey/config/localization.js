@@ -572,6 +572,7 @@ export const customLocaleStrings = {
   },
   p: {
     adminNotification: '管理者にお知らせ送信',
+    userNotification: '入力されたメールに自動返信をする',
   },
 };
 
